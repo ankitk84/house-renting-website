@@ -1,0 +1,59 @@
+body {
+ border: groove rgb(69, 69, 228) 20px;
+}
+.form {
+ padding-left: 62%;
+padding-bottom: 40px;
+padding-top: 230px;
+}
+fieldset {
+ width: 500px;
+border: solid whitesmoke 3px;
+ border-style: groove;
+box-shadow: 0px 0px 10px rgb(101, 101, 226);
+ background-color: rgb(69, 69, 228);
+}
+label {
+ color: whitesmoke;
+font-weight: bold;
+text-decoration-color: black;
+}
+.image {
+ position: absolute;
+}
+form {
+ font-family: cursive;
+text-shadow: 1px 1px black;
+}
+.para {
+ color: rgb(69, 69, 228);
+ font-family: cursive;
+font-size: 50px;
+}
+.para2 {
+ color: rgb(69, 69, 228);
+ font-family: cursive;
+font-size: 40px;
+}
+#name {
+ width: 200px;
+}
+#email {
+ width: 200px;
+}
+#submit {
+ height: 35px;
+padding: 1.5px;
+width: 150px;
+background-color: whitesmoke;
+color: rgb(69, 69, 228);
+ font-family: cursive;
+font-weight: bold;
+}
+a {
+ text-decoration: none;
+color: whitesmoke;
+}
+a:hover {
+ color: gray;
+}
