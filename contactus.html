@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Contact us </title>
+ <link rel="stylesheet" href="contactus_form.css">
+ <script>
+ function myfun() {
+ var x = document.getElementById("form");
+ if (x.style.display === "none") {
+ x.style.display = "block";
+ } else {
+ x.style.display = "none";
+ }
+ var y = document.getElementById("closed");
+ if (x.style.display = "block") {
+ y.style.display = "none";
+ }
+ }
+ function validate() {
+ var name = document.getElementById('name');
+ var query = document.getElementById('query');
+ var email = document.getElementById('email');
+ var atposition = email.value.indexOf("@");
+ var dotposition = email.value.lastIndexOf(".");
+ if (name.value == "" || query.value == "" || email.value == "") {
+ alert("No blank values allowed");
+return false;
+ }
+ if (atposition < 1 || dotposition < atposition + 2 || dotposition
++ 2 >= x.length) {
+ alert("Please enter a valid e-mail address");
+email.style.border = "2px red solid";
+ return false;
+ }
+ return true;
+ }
+ function body() {
+ var x = document.getElementById("form");
+ x.style.display = "none";
+ }
+ </script>
+</head>
+<body class="body" onload="body()">
+ <div class="top-wrapper" name="top-wrapper">
+ <div class="container" name="container">
+ <center>
+ <p class="para">We'd love to hear from you!</p>
+ <div class="btn">
+ <center><button class="openbtn" onclick="myfun()">OPEN THIS</button></center>
+ </div>
+<div class="form" id="form">
+ <form name="MyForm" onsubmit=" return validate()" action="
+main.html">
+ <fieldset>
+ <label>
+ <br>
+ NAME:
+ <br>
+<input type="text" id="name" name="name">
+ <i class="fas fa-user"></i>
+ </label>
+ <br>
+<br>
+<label>
+ EMAIL:<br>
+ <input type="text" id="email" name="email">
+ </label>
+ <br>
+<br>
+<label>
+ QUERY:
+ <br>
+ <textarea rows="4" cols="30" name="query" id="query"></textare
+a>
+ <br>
+<br>
+<input type="submit" value="Submit" id="submit" name="submit" o
+nsubmit="submit">
+ <br>
+<br>
+ </fieldset>
+ </form>
+</div>
+ <img class="closed" id="closed" name="closed" src="https://gallery.yo
+priceville.com/var/resizes/Free-Clipart-Pictures/Decorative-ElementsPNG/Envelope_PNG_Clip_Art_Image.png?m=1507172113" height="290px" width="480px"
+>
+ </center>
+ </div>
+ </div>
+</body>
+</html>
