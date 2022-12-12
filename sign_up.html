@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+ <link rel="stylesheet" href="signup_form.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+ <script>
+ function validate() {
+ var choices = document.getElementById('choices');
+ var email = document.getElementById('email');
+ var atposition = email.value.indexOf("@");
+ var dotposition = email.value.lastIndexOf(".");
+ var name = document.getElementById('name');
+ var password = document.getElementById('password');
+ if (name.value == "" || password.value == "" || choices.value == "
+" || email.value == "") {
+ alert("No blank values allowed");
+return false;
+ }
+ if (password.value.length < 6) {
+ alert("password length should be greater than 6");
+ password.style.border = "2px red solid";
+ return false;
+ }
+ if (atposition < 1 || dotposition < atposition + 2 || dotposition
++ 2 >= x.length) {
+ alert("Please enter a valid e-mail address");
+email.style.border = "2px red solid";
+ return false;
+ }
+ return true;
+ }
+ </script>
+</head>
+<body>
+ <div class="wave">
+ <img class=" reflect" src="https://legendofvelda.files.wordpress.com/2
+012/04/dark-blue-wave-tile.png?w=768">
+ <div class="image">
+ <img src="undraw_House_searching_re_stk8.svg">
+ </div>
+ <div class="form">
+ <span class="para2">SIGN UP</span>
+ <form name="MyForm" onsubmit=" return validate()" action="main.htm
+l">
+ <fieldset>
+ <label>
+ <br>
+ NAME:
+ <br>
+<input type="text" id="name" name="name">
+ 
+ </label>
+ <br>
+<br>
+<label>
+ EMAIL:<br>
+ <input type="text" id="email" name="email" >
+ </label>
+ <br>
+<br>
+<label>
+ PASSWORD:
+ <br>
+<input type="password" id="password" name="password">
+ </label>
+ <br>
+<br>
+<label>
+ YOUR CHOICES:
+ <br>
+ <textarea rows="4" cols="30" name="choices" id="choices"></tex
+tarea>
+ </label>
+ <br>
+<br>
+<input type="submit" value="SignUp" id="submit" name="submit" onclick="submit">
+ <br>
+<br>
+ </fieldset>
+ </form>
+ </div>
+ </div>
+</body>
+</html>
