@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing.com</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+.main{
+    margin-top: 75px;
+    width: 100%;
+    height: 100%;
+}      
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 0px;
+    margin-left: 10px;
+    /* margin: 0 auto; */
+}        
+header {
+    height: 65px;
+    width: 100%;
+    background-color: rgba(34, 49, 52, 0.9);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.logo {
+    width: 200px;
+    margin-top: 1px;
+}
+.header-left {
+    float: left;
+    height: 25px;
+}
+.header-right {
+    float: right;
+    margin-right: -25px;
+}
+.header-right a {
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+    display: block;
+    float: left;
+    transition: all 0.5s;
+}
+.header-right a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.subleft{
+    width:15%;
+    height:100vh ;
+    display: inline-block;
+    position:relative;
+    background-color:white;
+    border: 2px solid black;
+    /* enable div scrolling */
+    overflow-y:scroll;
+    overflow-x: hidden;
+    position:fixed;
+    border: 1px black solid;
+    margin: 0 auto;  
+}
+.sub{
+    width:68%;
+    height: auto;
+    margin-top: 0%;
+    display:inline-block;
+    position: absolute;
+    left: 20%;
+    border: 1% solid black;
+}
+ .electrical{
+    width: auto;
+    height: 60%;
+    background-color:white;
+    background-position: 15px 70%;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    margin:15px 15px;
+    border: 1px solid grey;    
+}
+.subelect{
+    width: 100%;
+    color:black;
+    font: bolder;
+    margin-right: 0%;
+    height:auto;
+}
+.address{
+    width: 90%;
+    margin-right: 55%;
+    font-size: small;
+    display: inline;
+    padding-left: 10px;
+    margin-top: 0%;
+}
+.heading{
+    background-color:darkcyan;
+    width: auto;
+    padding-top: 5px;
+    padding-left: 10px;
+    margin:0%
+}
+.price{
+    text-align: left;
+    display:inline-block;
+    position: relative;
+    width: 20%;
+    margin-right: 0%;
+}
+.line1{
+    height: 2%;
+    background-color:cadetblue;
+}
+.line2,.line3,.line4,.line5{
+    margin-left: 27%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+hr{
+    height: 2px;
+    width: 70%;
+    margin-left:27% ;
+}
+.form,.book,.status,.bhk,.type,.area,.facil{
+
+    display: inline-table;
+    width: 30%;
+    text-align: left;
+    padding-left: 15px;
+    font-size: small;
+}
+.ab{
+    width:24%;
+    display: inline-table;
+    font-size:x-small;
+    text-align: center;
+}
+.fa-circle{
+   font-size: 2%;
+    vertical-align: middle;
+}
+a{
+    font-size: smaller;
+    color:deepskyblue;
+    text-decoration: none;
+}
+.section{
+    margin-right: 0%;
+}
+.details {
+  border-color: #2196F3;
+  color: dodgerblue;
+}
+.btn1 {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.details:hover {
+  background: #2196F3;
+  color: white;
+}
+.btn2{
+  border: 2px solid black;
+  background-color:dodgerblue;
+  color:white;
+  width: 20%;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.conatct:hover {
+  background:darkblue;
+  color: white;
+}
+.multiselect {
+  width: 100%;
+  margin-bottom: px;
+}
+.selectBox{
+  position: relative;
+}
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+.overSelect{
+  position: absolute;
+}
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+#checkboxes label {
+  display: block;
+}
+#checkboxes label:hover{
+  background-color: #1e90ff;
+}
+#checkbo {
+  display: none;
+  border: 1px #dadada solid;
+}
+#checkbo label {
+  display: block;
+}
+#checkbo label:hover{
+  background-color: #1e90ff;
+}
+#floors {
+  display: none;
+  border: 1px #dadada solid;
+}
+#floors label {
+  display: block;
+}
+#floors label:hover{
+  background-color: #1e90ff;
+}
+#amenities {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#amenities label {
+  display: block;
+}
+
+#amenities label:hover{
+  background-color: #1e90ff;
+}
+
+
+</style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href="#"><img class="logo" src="C:\Users\HP\Downloads\logo1.png"></a>
+            </div>
+            <div class="header-right">
+                <a href="#">Sign in</a>
+                <a href="#">Sign up</a>
+                <a href="https://mayank3005.github.io/proj1/index.html" target="_blank">Contact us</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="main">
+    <div class="subleft">
+        <div>
+            <h>Do your search more easy</h><br>
+            <a href="#" style="text-decoration: none;">Clear all applied filters </a><br>
+        </div>
+
+        <div class="property">
+            <script>
+                var expanded = false;
+            function showCheckboxes() {
+              var checkboxes = document.getElementById("checkboxes");
+              if (!expanded) {
+                checkboxes.style.display = "block";
+                expanded = true;
+              } else {
+                checkboxes.style.display = "none";
+                expanded = false;
+              }
+            }
+            </script>
+  <form class="formm">
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <select>
+          <option>Property type</option>
+        </select>
+        <div class="overSelect"></div>
+      </div>
+      <div id="checkboxes">
+        <label for="one">
+          <input type="checkbox" id="one" />Apartments</label>
+        <label for="two">
+          <input type="checkbox" id="two" />villa</label>
+        <label for="three">
+          <input type="checkbox" id="three" />Plots</label>
+          <label for="four">
+            <input type="checkbox" id="four" />builder floors</label>
+      </div>
+    </div>
+  </form>
+  </div>
+  <br>
+<div class="beds">
+    <form >
+        <script>
+            var expanded = false;
+        function showCheckbo() {
+          var checkbo = document.getElementById("checkbo");
+          if (!expanded) {
+            checkbo.style.display = "block";
+            expanded = true;
+          } else {
+            checkbo.style.display = "none";
+            expanded = false;
+          }
+        }
+        
+        </script>
+      <div class="multiselect">
+        <div class="selectBox" onclick="showCheckbo()">
+          <select>
+            <option>Beds</option>
+          </select>
+          <div class="overSelect"></div>
+        </div>
+        <div id="checkbo">
+          <label for="o">
+            <input type="checkbox" id="o" />1 BHK</label>
+          <label for="t">
+            <input type="checkbox" id="t" />2 BHK</label>
+          <label for="th">
+            <input type="checkbox" id="th" />3 BHK</label>
+            <label for="fo">
+              <input type="checkbox" id="fo" />3+ BHK</label>
+        </div>
+      </div>
+    </form>
+    </div>
+    <br>
+    
+    <div class="floors">
+        <form >
+            <script>
+                var expanded = false;
+            function showFloors() {
+              var floors = document.getElementById("floors");
+              if (!expanded) {
+                floors.style.display = "block";
+                expanded = true;
+              } else {
+                floors.style.display = "none";
+                expanded = false;
+              }
+            }
+            </script>
+          <div class="multiselect">
+            <div class="selectBox" onclick="showFloors()">
+              <select>
+                <option>Floors</option>
+              </select>
+              <div class="overSelect"></div>
+            </div>
+            <div id="floors">
+              <label for="q">
+                <input type="checkbox" id="q" />Basement</label>
+              <label for="w">
+                <input type="checkbox" id="w" />Ground</label>
+              <label for="e">
+                <input type="checkbox" id="e" />1 - 4</label>
+                <label for="r">
+                  <input type="checkbox" id="r" />5 - 8</label>
+                  <label for="fo">
+                    <input type="checkbox" id="fo" />9 - 14</label>
+                    <label for="fi">
+                        <input type="checkbox" id="fI" />15+</label>            
+            </div>
+          </div>
+        </form>
+        </div><br>
+    
+
+        <div class="floors">
+            <form >
+                <script>
+                    var expanded = false;
+                function showAmenities() {
+                  var amenities = document.getElementById("amenities");
+                  if (!expanded) {
+                    amenities.style.display = "block";
+                    expanded = true;
+                  } else {
+                    amenities.style.display = "none";
+                    expanded = false;
+                  }
+                }
+                </script>
+              <div class="multiselect">
+                <div class="selectBox" onclick="showAmenities()">
+                  <select>
+                    <option>Amenities</option>
+                  </select>
+                  <div class="overSelect"></div>
+                </div>
+                <div id="amenities">
+                  <label for="Parking">
+                    <input type="checkbox" id="Parking" />Parking</label>
+                  <label for="power">
+                    <input type="checkbox" id="power" />Power Backup</label>
+                  <label for="food">
+                    <input type="checkbox" id="food" />Food Service</label>
+                    <label for="Internet">
+                      <input type="checkbox" id="Internet" />Internet/wi-fi</label>
+                      <label for="gas">
+                        <input type="checkbox" id="gas" />Poiped Gas</label>
+                        <label for="">
+                            <input type="checkbox" id="Water" />24*7 Water Supply</label>            
+                </div>
+              </div>
+            </form>
+            </div><br>
+        <div class="subsub">
+            <h style="color:deepskyblue;">More Filters</h><br>
+            <label for="t">
+            <input type="checkbox" id="t" />Tenants Preferred</label>
+            <label for="th"><br>
+              <input type="checkbox" id="th" />Safe & Sanitised</label>
+              <label for="fo"><br>
+                <label for="th">
+                <input type="checkbox" id="th" />Posted by Certified Agents</label><br>
+                <label for="fo">
+                    <input type="checkbox" id="fo" />Verified Properties</label>
+        </div>
+       <br>
+
+    </div> 
+    <div class="sub">
+        <div class="topic" style=" background-color: ghostwhite; text-align: center;">
+            <h1>LOCATION- CHENNAI</h1>
+          </div>
+    <div class="electrical" style="  background-image: url(apppartemts2.jpg);">
+        <div class="heading">Mayank's Property</div>
+        <div class="line1">
+            <div class="address">
+                <h>Mega Road, Chennai</h>
+            </div>
+        
+            <div class="price"> 
+                <p><i class="fa fa-inr" aria-hidden="true"></i> 49,456/- to <i class="fa fa-inr" aria-hidden="true"></i>53,487/-</p></div>
+        </div>
+        <div class="subelect">
+           
+           <div class="line2">
+            <div class="form">
+                <h>POSSESSION FROM</h><br>
+               <a href="#">Completed in June 2017</a>
+               </div>
+               <div class="book">
+                   <h>BOOKING</h><br>
+                   <a href="#">Open/Close</a>
+               </div>
+                <div class="status">
+                    <h>CONSTRUCTION STATUS</h><br>
+                    <a href="#">Completed</a>
+                </div>
+           </div>
+           <div class="line3">
+            <div class="bhk">
+                <h>BHK</h><br>
+                <a href="#">1,2,3</a>
+            </div>
+            <div class="type">
+                <h>PROPERTY TYPES</h><br>
+                <a href="#">appartments</a>
+            </div>
+            <div class="area">
+                <h>AREA</h><br>
+                <a href="#">1200 - 1600 Sq.ft.</a>
+            </div>
+            </div>
+            <hr>
+            <div class="line4">
+                <div class="ab" style="text-align: left;">Amenities</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> 24 Hours Electricity Backup</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> CCTV Cameras</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> Car Parking</div>  
+            </div>  
+            <div class="line5">
+                <div class="section">
+                <h> <button class="btn1 details">View Details</button></h>
+               <h><button class="btn2 contact">Contact</button></h>
+               </div>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+
+    <div class="electrical" style="  background-image: url(plot2.jpg);">
+        <div class="heading">Jai City</div>
+        <div class="line1">
+            <div class="address">
+                <h>Gandhi Nagar,Chennai</h>
+            </div>
+            <div class="price"> 
+                <p><i class="fa fa-inr" aria-hidden="true"></i> 35,000/- to <i class="fa fa-inr" aria-hidden="true"></i>50,000/-</p></div>
+        </div>
+        <div class="subelect">
+           
+           <div class="line2">
+            <div class="form">
+                <h>POSSESSION FROM</h><br>
+               <a href="#">Completed in April 2016</a>
+               </div>
+               <div class="book">
+                   <h>BOOKING</h><br>
+                   <a href="#">Open/Close</a>
+               </div>
+                <div class="status">
+                    <h>CONSTRUCTION STATUS</h><br>
+                    <a href="#">Completed</a>
+                </div>
+           </div>
+           <div class="line3">
+            <div class="bhk">
+                <h>BHK</h><br>
+                <a href="#">1,2,3</a>
+            </div>
+            <div class="type">
+                <h>PROPERTY TYPES</h><br>
+                <a href="#">plots</a>
+            </div>
+            <div class="area">
+                <h>AREA</h><br>
+                <a href="#">800 - 1600 Sq.ft.</a>
+            </div>
+            </div>
+            <hr>
+            <div class="line4">
+                <div class="ab" style="text-align: left;">Amenities</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> 24 Hours Electricity Backup</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> CCTV Cameras</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> Car Parking</div>  
+            </div>  
+            <div class="line5">
+                <div class="section">
+                <h> <button class="btn1 details">View Details</button></h>
+               <h><button class="btn2 contact">Contact</button></h>
+               </div>
+            </div>
+        </div>    
+    </div>
+
+
+
+    <div class="electrical" style="  background-image: url(flats2.jpg);">
+        <div class="heading">Vibha Properties</div>
+        <div class="line1">
+            <div class="address">
+                <h>Model Town,Chennai</h>
+            </div>
+            <div class="price"> 
+                <p><i class="fa fa-inr" aria-hidden="true"></i> 33,599/- to <i class="fa fa-inr" aria-hidden="true"></i>45,999/-</p></div>
+        </div>
+        <div class="subelect">
+           
+           <div class="line2">
+            <div class="form">
+                <h>POSSESSION FROM</h><br>
+               <a href="#">Completed in march 2020</a>
+               </div>
+               <div class="book">
+                   <h>BOOKING</h><br>
+                   <a href="#">Open/Close</a>
+               </div>
+                <div class="status">
+                    <h>CONSTRUCTION STATUS</h><br>
+                    <a href="#">Completed</a>
+                </div>
+           </div>
+           <div class="line3">
+            <div class="bhk">
+                <h>BHK</h><br>
+                <a href="#">1,2,3</a>
+            </div>
+            <div class="type">
+                <h>PROPERTY TYPES</h><br>
+                <a href="#">Plots</a>
+            </div>
+            <div class="area">
+                <h>AREA</h><br>
+                <a href="#">1500 - 1700 Sq.ft.</a>
+            </div>
+            </div>
+            <hr>
+            <div class="line4">
+                <div class="ab" style="text-align: left;">Amenities</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> 24 Hours Electricity Backup</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> CCTV Cameras</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> Car Parking</div>  
+            </div>  
+            <div class="line5">
+                <div class="section">
+                <h> <button class="btn1 details">View Details</button></h>
+               <h><button class="btn2 contact">Contact</button></h>
+               </div>
+            </div>
+        </div>    
+    </div>
+
+
+    <div class="electrical" style="  background-image: url(villas2.jpg);">
+        <div class="heading">Ankit's Property</div>
+        <div class="line1">
+            <div class="address">
+                <h>Model colony,Chennai</h>
+            </div>
+            <div class="price"> 
+                <p><i class="fa fa-inr" aria-hidden="true"></i> 45,456/- to <i class="fa fa-inr" aria-hidden="true"></i> 50,256/-</p></div>
+        </div>
+        <div class="subelect">
+           
+           <div class="line2">
+            <div class="form">
+                <h>POSSESSION FROM</h><br>
+               <a href="#">Completed in April 2019</a>
+               </div>
+               <div class="book">
+                   <h>BOOKING</h><br>
+                   <a href="#">Open/Close</a>
+               </div>
+                <div class="status">
+                    <h>CONSTRUCTION STATUS</h><br>
+                    <a href="#">Completed</a>
+                </div>
+           </div>
+           <div class="line3">
+            <div class="bhk">
+                <h>BHK</h><br>
+                <a href="#">1,2,3</a>
+            </div>
+            <div class="type">
+                <h>PROPERTY TYPES</h><br>
+                <a href="#">villa</a>
+            </div>
+            <div class="area">
+                <h>AREA</h><br>
+                <a href="#">2000 - 2200 Sq.ft.</a>
+            </div>
+            </div>
+            <hr>
+            <div class="line4">
+                <div class="ab" style="text-align: left;">Amenities</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> 24 Hours Electricity Backup</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> CCTV Cameras</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> Car Parking</div>  
+            </div>  
+            <div class="line5">
+                <div class="section">
+                <h> <button class="btn1 details">View Details</button></h>
+               <h><button class="btn2 contact">Contact</button></h>
+               </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="electrical" style="  background-image: url(apartments3.jpg);">
+        <div class="heading">Omaxe Real Estate</div>
+        <div class="line1">
+            <div class="address">
+                <h>Professor colony,Chennai</h>
+            </div>
+            <div class="price"> 
+                <p><i class="fa fa-inr" aria-hidden="true"></i> 25,000/- to <i class="fa fa-inr" aria-hidden="true"></i>35,250/-</p></div>
+        </div>
+        <div class="subelect">
+           
+           <div class="line2">
+            <div class="form">
+                <h>POSSESSION FROM</h><br>
+               <a href="#">Completed in march 2021</a>
+               </div>
+               <div class="book">
+                   <h>BOOKING</h><br>
+                   <a href="#">Open/Close</a>
+               </div>
+                <div class="status">
+                    <h>CONSTRUCTION STATUS</h><br>
+                    <a href="#">Completed</a>
+                </div>
+           </div>
+           <div class="line3">
+            <div class="bhk">
+                <h>BHK</h><br>
+                <a href="#">1,2,3</a>
+            </div>
+            <div class="type">
+                <h>PROPERTY TYPES</h><br>
+                <a href="#">Apartments</a>
+            </div>
+            <div class="area">
+                <h>AREA</h><br>
+                <a href="#">1000 - 1600 Sq.ft.</a>
+            </div>
+            </div>
+            <hr>
+            <div class="line4">
+                <div class="ab" style="text-align: left;">Amenities</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> 24 Hours Electricity Backup</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> CCTV Cameras</div>
+                <div class="ab"><i class="fa fa-circle" aria-hidden="true"></i> Car Parking</div>  
+            </div>  
+            <div class="line5">
+                <div class="section">
+                <h> <button class="btn1 details">View Details</button></h>
+               <h><button class="btn2 contact">Contact</button></h>
+               </div>
+            </div>
+        </div>    
+    </div>
+</div>
+    </div>
+</body>
+</html>
