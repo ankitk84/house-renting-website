@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Housing.com</title>
+ <link rel="stylesheet" href="main.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/4.7.0/css/font-awesome.min.css">
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@
+0,500;0,800;0,900;1,600;1,700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap"
+rel="stylesheet">
+ <script>
+ function preload() {
+ var ele = document.getElementById("loading");
+ ele.style.display = "none";
+ }
+ function preloader() {
+ setTimeout(preload, 2000);
+ }
+ function myfunc() {
+ var x = document.getElementById("options");
+ switch (x.value) {
+ case "Banglore":
+ window.location = "banglore.html";
+ break;
+ case "Chennai":
+ window.location = "chennai.html";
+ break;
+ case "Mumbai":
+ window.location = "mumbai.html";
+ break;
+ case "Delhi":
+ window.location = "delhi.html";
+ break;
+ }
+ }
+ </script>
+</head>
+<body onload="preloader()">
+ <div id="loading"></div>
+ <header>
+ <div class="container">
+ <div class="header-left">
+ <a href="#"><img class="logo" src="logo1.png"></a>
+ </div>
+<div class="header-right">
+ <a href="sign_in.html">Sign in</a>
+ <a href="sign_up.html">Sign up</a>
+ <a href="contactus.html" target="_blank">Contact us</a>
+ </div>
+ </div>
+ </header>
+<div class="top-wrapper">
+ <div class="container">
+ <img class="wrapper-img" src="img (3).cms">
+ <h1 class="top-heading">"Where Dreams Come Home"</h1>
+ <h1 class="top-heading1">Properties to rent in India.</h1>
+ <p style="margin-left: 3%;">Your search ends here</p>
+ <div class="searchbar" style="margin-top:20px">
+ <span class="details" style="fontsize: 20px;"><a href="#">Buy</a></span> &nbsp; &nbsp; <span class="details"><a
+href="#">Rent</a></span>
+ <div class="searchbox">
+ <select id="options" name="options" value="Search for loca
+lity,landmark,project or builder">
+ <option value="select" selected>Search for locality,landmark,project or
+ builder</option> 
+ <option name="Banglore" id="Banglore" value="Banglore">Banglore</option>
+ <option name="Chennai" id="Chennai" value="Chennai">Chennai</option>
+ <option name="Mumbai" id="Mumbai" value="Mumbai">Mumbai</option>
+ <option name="Delhi" id="Delhi" value="Delhi">Delhi</option>
+ </select>
+ <button onclick="myfunc()"><i class="fa fasearch"></i> Search</button>
+ </div>
+ </div>
+ </div>
+ </div>
+<div class="lesson-wrapper">
+ <div class="container1">
+ <div class="seperator-line-4-color">
+ <span class="c1"></span>
+ <span class="c2"></span>
+ <span class="c3"></span>
+ <span class="c4"></span>
+ </div>
+<!-- <hr class="color-line" size=5px noshade> -->
+<div class="heading-1">
+ <h2>Our Vision</h2>
+ </div>
+<p class="vision">✨To Connect Tenants And Renters On One Platform
+✨</p>
+ <div class="seperator-line-4-color">
+ <span class="c1"></span>
+ <span class="c2"></span>
+ <span class="c3"></span>
+ <span class="c4"></span>
+ </div>
+<div class="heading-2">
+ <h2>How are renters and owners rated ?</h2>
+ </div>
+<div class="lessons">
+ <div class="lesson">
+ <div class="lesson-icon">
+ <img src="img1.jpeg">
+ <h2>Rate and Reviews</h2>
+ </div>
+<p class="textcontents">Here you find all the reviews of tenants </p>
+ </div>
+<div class="lesson">
+ <div class="lesson-icon">
+ <img src="img2.png">
+ <h2>Best accomodation</h2>
+ </div>
+<p class="textcontents">These facilities provide housing and basic services to the guests.</
+p>
+ </div>
+<div class="lesson">
+ <div class="lesson-icon">
+ <img src="img3.jpeg">
+ <h2>Safety</h2>
+ </div>
+<p class="textcontents">issue of security and safety are a major concern for both landlords 
+and tenants</p>
+ </div>
+<div class="lesson">
+ <div class="lesson-icon">
+ <img src="img4.jpeg">
+ <h2>Affordability</h2>
+ </div>
+<p class="text-contents">A common measure of communitywide affordability is the number of homes that a household with a certain perc
+entage of median income can afford</p>
+ </div>
+<div class="clear"></div>
+ </div>
+ </div>
+ </div>
+ <div id="testimonials">
+ <div class="heading">Reviews</div>
+ <div class="container">
+ <img src="man4.jpg" alt="Avatar" style="width:90px">
+ <p><span>Venkat,Chennai</span></p>
+ <p>I had to suddenly movie to chennai ,due to lockdown and I went 
+through this found a good deal in finding home and it was easy and effortless 
+...</p>
+ <div class="stars">
+ <span class="fa fa-star checked star" style="marginright:0 ;"></span>
+ <span class="fa fa-star checked star" style="marginright:0 ; "></span>
+ <span class="fa fa-star checked star" style="marginright:0; "></span>
+ <span class="fa fa-star checked star" style="marginright:0 ; "></span>
+ <span class="fa fa-star checked star" style="marginright:0 ;"></span>
+ </div>
+ </div>
+ <div class="container ">
+ <img src="man.jpg " alt="Avatar " style="width:90px ">
+ <p><span>Jigar,Gujrat</span></p>
+ <p>The management is very well organised and they help in getting 
+properties at a reliable price, they are very responsive and they have deals o
+f very good properties</p>
+ <div class="stars">
+ <span class="fa fa-star checked star" style="marginright:0 ;"></span>
+ <span class="fa fa-star checked star" style="marginright:0 ; "></span>
+ <span class="fa fa-star checked star" style="marginright:0; "></span>
+ <span class="fa fa-star checked star" style="marginright:0 ; "></span>
+ <span class="fa fa-star checked star" style="marginright:0 ;"></span>
+ </div>
+ </div>
+ <div class="container ">
+ <img src="women3.jpg " alt="Avatar " style="width:90px ">
+ <p><span>Ishita,Delhi</span></p>
+ <p>They were very helpfull and coordinative in helping me find the right property as per my requirements; they 
+are also very reasonable in charging their fee; the staff were very generous a
+nd needed their hand when ever I needed their help.</p>
+ <div class="stars">
+ <span class="fa fa-star checked star" style="marginright:0 ;"></span>
+ <span class="fa fa-star checked star" style="marginright:0 ; "></span>
+ <span class="fa fa-star checked star" style="marginright:0; "></span>
+ <span class="fa fa-star checked star" style="marginright:0 ; "></span>
+ <span class="fa fa-star star" style="margin-right:0 ;"></span>
+ </div>
+ </div>
+ </div>
+ <div class="bottom-container ">
+ <a href="https://in.linkedin.com/ ">LinkedIn</a>
+ <a href="https://twitter.com/?lang=en ">Twitter</a>
+ <a href="https://github.com/ ">GitHub</a>
+ <p class="last-content ">&#169 2021 Housing.com</p>
+ </div>
+</body>
+</html>
